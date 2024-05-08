@@ -9,5 +9,5 @@ export async function POST(request: NextRequest) {
             return await NextResponse.json({succes: "Login Success"});
         }   
     }
-    return await NextResponse.json({error: "Login Failed"},{status: 400});
+    return await NextResponse.json({error: "Login Failed : Email or pasword is incorrect"},{status: 400});
 }

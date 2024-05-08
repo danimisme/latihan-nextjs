@@ -27,6 +27,7 @@ export default function Page() {
       })
       .catch((err) => {
         console.log("err", err.response);
+        alert(err.response.data.error);
       });
   };
   return (
