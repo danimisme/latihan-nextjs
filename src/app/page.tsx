@@ -1,5 +1,8 @@
-import Image from "next/image";
+import dynamic from "next/dynamic";
 
+const ImageBanner = dynamic(() => import("@/components/ImageBanner"), {
+  loading: () => <p>Loading...</p>,
+});
 export default function Home() {
   return (
     <>
@@ -7,10 +10,11 @@ export default function Home() {
         <h1 className="font-bold text-2xl text-gray-600">My Blog Website</h1>
         <div className="py-4 text-gray-600">
           <div className="py-4">
-            <img
+            {/* <img
               src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
               alt=""
-            />
+            /> */}
+            <ImageBanner url="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" />
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
