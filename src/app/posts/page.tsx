@@ -1,4 +1,5 @@
 import { Post } from "@/model/post";
+import { api } from "@/utils/api";
 import axios from "axios";
 import Link from "next/link";
 
@@ -8,7 +9,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const { data } = await axios.get<Post[]>("http://localhost:3001/posts");
+  const { data } = await api.get<Post[]>("/posts");
 
   return (
     <div>
