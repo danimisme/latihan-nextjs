@@ -3,8 +3,12 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
+    let checkAuth = false;
     
-    const checkAuth = false;
+    const checkToken = request.cookies.get("accessToken");
+    if (checkToken) {
+        checkAuth = true;
+    }
 
     if(checkAuth) {
         return NextResponse.next();
