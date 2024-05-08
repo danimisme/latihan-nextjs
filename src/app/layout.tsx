@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex w-full h-screen">
           <Sidebar />
-          <div className="right-container p-4 w-[78%] overflow-y-auto">
+          <div className="right-container p-4 w-[82%] overflow-y-auto">
             <Content>{children}</Content>
             <Footer />
           </div>
