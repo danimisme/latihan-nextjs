@@ -4,7 +4,7 @@ interface Props {
   url: string;
 }
 
-const ImagePost: FC<Props> = async ({ url }) => {
+const ImageBanner: FC<Props> = async ({ url }) => {
   const loaded = await new Promise((resolve) => {
     setTimeout(() => {
       resolve(true);
@@ -13,4 +13,4 @@ const ImagePost: FC<Props> = async ({ url }) => {
   return <img src={url} alt="" />;
 };
 
-export default ImagePost;
+export default ImageBanner;
