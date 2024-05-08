@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Menu {
   label: string;
   url: string;
@@ -29,7 +31,7 @@ const Sidebar = () => {
         <li className="mb-10 text-white font-bold text-xl">My Blog</li>
         {menus.map((menu, index) => (
           <li key={index} className="my-6 text-white">
-            {menu.label}
+            <Link href={menu.url}>{menu.label}</Link>
           </li>
         ))}
       </ul>
