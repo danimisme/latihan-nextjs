@@ -6,10 +6,9 @@ interface Props {
 
 const Content: FC<Props> = ({ children }) => {
   return (
-    <>
-      <h1>Content</h1>
+    <div className="min-h-[600px] max-h-screen overflow-y-scroll">
       {children}
-    </>
+    </div>
   );
 };
 
